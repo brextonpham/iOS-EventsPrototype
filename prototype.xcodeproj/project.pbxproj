@@ -14,6 +14,9 @@
 		D6C473ED1B71AFAD008D4FA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C473EC1B71AFAD008D4FA6 /* Images.xcassets */; };
 		D6C473F01B71AFAD008D4FA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C473EE1B71AFAD008D4FA6 /* LaunchScreen.xib */; };
 		D6C473FC1B71AFAD008D4FA6 /* prototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C473FB1B71AFAD008D4FA6 /* prototypeTests.m */; };
+		D6C474081B71C11F008D4FA6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C474051B71C11F008D4FA6 /* FBSDKCoreKit.framework */; };
+		D6C474091B71C11F008D4FA6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C474061B71C11F008D4FA6 /* FBSDKLoginKit.framework */; };
+		D6C4740A1B71C11F008D4FA6 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C474071B71C11F008D4FA6 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		D6C473F51B71AFAD008D4FA6 /* prototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C473FA1B71AFAD008D4FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6C473FB1B71AFAD008D4FA6 /* prototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = prototypeTests.m; sourceTree = "<group>"; };
+		D6C474051B71C11F008D4FA6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D6C474061B71C11F008D4FA6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D6C474071B71C11F008D4FA6 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C474091B71C11F008D4FA6 /* FBSDKLoginKit.framework in Frameworks */,
+				D6C474081B71C11F008D4FA6 /* FBSDKCoreKit.framework in Frameworks */,
+				D6C4740A1B71C11F008D4FA6 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 		D6C473DE1B71AFAD008D4FA6 /* prototype */ = {
 			isa = PBXGroup;
 			children = (
+				D6C4740B1B71C125008D4FA6 /* Frameworks */,
 				D6C473E31B71AFAD008D4FA6 /* AppDelegate.h */,
 				D6C473E41B71AFAD008D4FA6 /* AppDelegate.m */,
 				D6C473E61B71AFAD008D4FA6 /* ViewController.h */,
@@ -117,6 +127,16 @@
 				D6C473FA1B71AFAD008D4FA6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6C4740B1B71C125008D4FA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6C474051B71C11F008D4FA6 /* FBSDKCoreKit.framework */,
+				D6C474061B71C11F008D4FA6 /* FBSDKLoginKit.framework */,
+				D6C474071B71C11F008D4FA6 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/prototype",
+				);
 				INFOPLIST_FILE = prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/prototype",
+				);
 				INFOPLIST_FILE = prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
